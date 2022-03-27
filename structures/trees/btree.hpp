@@ -1,11 +1,11 @@
 /**
  * @file btree.hpp
- * @author your name (you@domain.com)
- * @brief 
+ * @author Lorenzo Conti (lorenzo.conti3@studenti.unimi.it)
+ * @brief Implementation of the B-Tree data structure.
  * @version 0.1
  * @date 2022-03-25
  * 
- * @copyright Copyright (c) 2022
+ * @AlgorithmsCPP Copyright (c) 2022 Lorenzo Conti
  * 
  */
 
@@ -36,7 +36,7 @@ namespace BTree{
             
 
             /**
-             * @brief Insert new data value 
+             * @brief Insert new data value in a node that's not full.
              * 
              * @param node Starting node where the value should be inserted to.
              * @param value Value to be inserted in the node
@@ -69,6 +69,13 @@ namespace BTree{
                 }
             }
 
+            /**
+             * @brief Split a child node of the current node at index i into 2 children nodes,
+             * that still belong to the parent node.
+             * 
+             * @param i Position index where the new
+             * @param y 
+             */
             void SplitChild(int i, Node *y){
                 Node<T> *z = new Node(y->rank, y->leaf);
                 z->n = rank - 1;
