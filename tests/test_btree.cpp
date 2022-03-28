@@ -5,7 +5,7 @@
 using namespace BTree;
 
 int main(){
-    Tree<int> t(4);
+    Tree<int> t(10);
     t.Insert(8);
     t.Insert(9);
     t.Insert(10);
@@ -30,4 +30,14 @@ int main(){
                     << k << " is found"
                 : cout << endl
                     << k << " is not Found\n";
+
+
+    t.Delete(18);
+    t.Scan();
+    t.Insert(255);
+    t.Insert(99);
+    t.Insert(120);
+    t.Delete(99);
+    t.Scan();
+    return 0;
 }
