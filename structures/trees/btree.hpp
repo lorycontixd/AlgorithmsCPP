@@ -364,9 +364,9 @@ namespace BTree{
                 if (root->n == 0) {
                     Node<T> *tmp = root;
                     if (root->leaf)
-                    root = NULL;
+                        root = NULL;
                     else
-                    root = root->pointers[0];
+                        root = root->pointers[0];
 
                     delete tmp;
                 }
